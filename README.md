@@ -12,7 +12,7 @@ int main()
         printf("i:%d星星\n", i);
     }
 }
-
+```
 #06-2金字塔
 ```cpp
 #include <stdio.h>
@@ -25,7 +25,7 @@ int main()
         printf("\n");
     }
 }
-
+```
 #06-3最大公因數
 ```cpp
 #include <stdio.h>
@@ -42,7 +42,7 @@ int main()
     }
     printf("ans: %d 可約分", ans);
 }
-
+```
 #06-4輾轉相除法
 ```cpp
 #include <stdio.h>

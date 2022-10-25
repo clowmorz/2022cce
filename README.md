@@ -133,3 +133,104 @@ int main()
     printf("現在的個位數:%d\n", n%10);
     n=n/10;
 }
+```
+#08-1 for迴圈質數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int bad=0;
+    for(int i=2;i<n;i++){
+        if(n%i==0) bad=1;
+    }
+    if(bad==0) printf("%d 是質數", n );
+    else printf("%d 不好,不是質數", n);
+}
+///質數判別
+///不能被約分的數字
+///只能被1還有n本身可以整除/約分
+///暴力法
+```
+#08-2判斷 n 是不是質數
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    for(int n=2;n<=a;n++){
+        int bad=0;
+        for(int i=2;i<n;i++){
+            if(n%i==0)bad=1;
+        }
+        if(bad==0)printf("%d",n);
+    }
+}
+```
+#08-3。迴圈sum
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("請輸入 5個數字(要加起來): ");
+
+    int n;
+    int sum=0;
+    for(int i=0; i<5;i++){
+        scanf("%d", &n);
+        sum +=n;
+    }
+    printf("總和是:%d", sum);
+}
+```
+#08-4 for直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int k=1;k<=n-i;k++)printf(" ");
+        for(int k=1;k<=i ;k++)printf("*");
+        printf("\n");
+    }
+}
+```
+#08-5 while迴圈印直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    for(int i=1; i<=n;i++){
+        for(int k=1; k<=n; k++){
+            if(k<=n-i)printf(" ");
+            else printf("*");
+        }
+        printf("\n");
+    }
+}
+```
+#08-6 2個while迴圈 三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int i=1;
+    while(i<=n){
+        int k=1;
+        while(k<=n){
+            if (k<=n-i)printf(" ");
+            else printf("*");
+            k++;
+        }
+        printf("\n");
+        i++;
+    }
+}

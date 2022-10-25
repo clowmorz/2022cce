@@ -199,7 +199,7 @@ int main()
     }
 }
 ```
-#08-5 while迴圈印直角三角形
+#08-5 兩個for迴圈印直角三角形
 ```cpp
 #include <stdio.h>
 int main()

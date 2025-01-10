@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTOLO_</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        
+        .w {
+            width: 250px;
+            margin-left: 370px; 
+        }
+
+      
+        .show {
+            display: block;
+            overflow: auto;
+            max-height: 400px; 
+            padding: 20px;
+        }
+
+     
+        .head {
+            height: 250px;
+            background-color: rgb(204, 204, 200);
+            margin-bottom: 80px;
+            opacity: 0;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .head h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        
+        .banner {
+            height: 500px;
+            background-color: rgb(224, 224, 221);
+            margin-bottom: 150px;
+            opacity: 0.9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner h2 {
+            font-size: 2em;
+            color: #333;
+        }
+
+       
+        .body {
+            height: 900px;
+            background-color: rgb(224, 224, 221);
+            margin-top: 150px; 
+            margin-bottom: 80px;
+            opacity: 0.9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .body h2 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        
+        .foot {
+            height: 100px;
+            background-color: rgb(224, 224, 221);
+            opacity: 0;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .foot p {
+            font-size: 1em;
+            color: #333;
+        }
+
+       
+        .full-screen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("66.jpg"); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: 1;
+        }
+
+      
+        .centered-text {
+            position: absolute;
+            top: 5%;
+            left: 48%;
+            transform: translateX(-80%);
+            color: rgb(19, 18, 18);
+            font-size: 2.1em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(122, 122, 122, 0.6);
+            z-index: 3;
+        }
+
+        
+        .subheading {
+            position: absolute;
+            top: 18%;
+            left: 52%;
+            transform: translateX(-90%);
+            color: rgb(27, 27, 27);
+            font-size: 0.6em;
+            text-shadow: 2px 2px 4px rgba(138, 135, 135, 0.6);
+            z-index: 3;
+        }
+
+        .right-images {
+            position: fixed;
+            right: 350px;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 3;
+        }
+
+        .right-images img {
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+        }
+
+     
+    </style>
+</head>
+<body>
+
+    
+    <div class="head w" id="head">
+        <h2>網站頭部</h2>
+    </div>
+
+    <div class="banner w" id="banner">
+        <h2></h2>
+        <div class="left-images" style="top: 20%; left: 10px;">
+            <img src="777.png" alt="Left Image 1" style="width: 350px; height: auto;">
+           
+        </div>
+    </div>
+    
+    <div class="body w" id="body">
+        <h2></h2>
+        <div class="left-images" style="top: 20%; left: 10px;">
+        <img src="888.png" alt="Left Image 2" style="width: 200px; height: auto;">
+    </div>
+    </div>
+
+
+    
+    <div class="foot w" id="foot">
+        <p>- © 2025 LOTTOLO_</p>
+    </div>
+
+  
+    <div class="full-screen-image"></div>
+
+    
+    <div class="centered-text">
+        <h1>LOTTOLO_</h1>
+    </div>
+
+   
+    <div class="subheading">
+        <p>Welcome &nbsp;to &nbsp;my&nbsp; secret&nbsp;house &nbsp;and&nbsp; come &nbsp;to &nbsp;see &nbsp;what &nbsp;you &nbsp;wish &nbsp;to &nbsp;know &nbsp;about&nbsp; me&nbsp;&nbsp;.</p>
+    </div>
+
+  
+    <div class="right-images">
+        
+        <a href="javascript:void(0);" onclick="scrollToSection('banner')">
+            <img src="8.png" alt="Image 1">
+        </a>
+     
+        <a href="javascript:void(0);" onclick="scrollToSection('body')">
+            <img src="9.png" alt="Image 2">
+        </a>
+    
+
+    <script>
+     
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop, 
+                behavior: 
+            });
+        }
+    </script>
+
+</body>
+</html>
